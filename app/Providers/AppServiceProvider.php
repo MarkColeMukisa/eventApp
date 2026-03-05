@@ -21,6 +21,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Blaze::optimize()
-            ->in(resource_path('views'));
+            ->in(resource_path('views/components'));
     }
 }

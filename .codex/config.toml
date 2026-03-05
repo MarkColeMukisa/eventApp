@@ -1,4 +1,4 @@
 [mcp_servers.laravel-boost]
 command = "php"
 args = ["artisan", "boost:mcp"]
-cwd = "C:\\laravel\\filamentappv5"
+cwd = "D:\\Jnr Developer\\Laravel\\eventApp"

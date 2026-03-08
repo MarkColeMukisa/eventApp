@@ -33,7 +33,7 @@
                         <article class="flex h-full w-full max-w-xl flex-col overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-md">
                             @if ($event->cover_image_url)
                                 <img
-                                    src="{{ $event->cover_image_url }}"
+                                    src="{{ $event->cover_image }}"
                                     alt="{{ $event->title }}"
                                     class="h-56 w-full object-cover"
                                 />

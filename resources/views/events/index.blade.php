@@ -10,6 +10,19 @@
     </head>
     <body class="min-h-screen bg-amber-50/40 text-zinc-900 antialiased">
         <div class="mx-auto flex w-full max-w-7xl flex-col gap-10 px-4 py-10 sm:px-6 lg:px-8">
+            <nav class="flex items-center justify-between gap-4 px-5 py-4">
+                <a href="{{ url('/') }}" class="text-lg font-semibold tracking-tight text-zinc-900 sm:text-xl">
+                    {{ config('app.name') }}
+                </a>
+
+                <a
+                    href="{{ url('/admin') }}"
+                    class="inline-flex items-center rounded-full bg-amber-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-amber-600 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2"
+                >
+                    Admin
+                </a>
+            </nav>
+
             <header class="mx-auto flex max-w-2xl flex-col items-center gap-4 text-center">
                 <span class="inline-flex items-center rounded-full border border-amber-300 bg-amber-100 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-amber-800">
                     Events

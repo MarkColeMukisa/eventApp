@@ -18,18 +18,18 @@ class EventFactory extends Factory
      */
     public function definition(): array
     {
-        $title = fake()->unique()->sentence(3);
-        $startsAt = fake()->dateTimeBetween('+1 day', '+45 days');
-        $endsAt = (clone $startsAt)->modify('+'.fake()->numberBetween(1, 12).' hours');
+        $title = $this->faker->unique()->sentence(3);
+        $startsAt = $this->faker->dateTimeBetween('+1 day', '+45 days');
+        $endsAt = (clone $startsAt)->modify('+'.$this->faker->numberBetween(1, 12).' hours');
 
         return [
             'title' => $title,
-            'slug' => Str::slug($title).'-'.fake()->unique()->numberBetween(1000, 9999),
-            'description' => fake()->paragraph(),
-            'location' => fake()->city(),
+            'slug' => Str::slug($title).'-'.$this->faker->unique()->numberBetween(1000, 9999),
+            'description' => $this->faker->paragraph(),
+            'location' => $this->faker->city(),
             'starts_at' => $startsAt,
             'ends_at' => $endsAt,
-            'is_published' => fake()->boolean(),
+            'is_published' => $this->faker->boolean(),
             'cover_image' => null,
         ];
     }
